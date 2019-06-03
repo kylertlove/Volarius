@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "volarius:block/coal_plant_2"
+    }
+}

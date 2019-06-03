@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "volarius",
+  "version": "${version}",
+
+  "name": "Volarius Mod",
+  "description": "Random Mod for now",
+  "authors": [
+    "Kyler Love"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": "https://github.com/kylertlove/Volarius"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.nerds.volarius.Volarius"
+    ]
+  },
+  "mixins": [
+    "volarius.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
