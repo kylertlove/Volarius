@@ -2,7 +2,8 @@
 Minecraft Mod
 
 
-Install Link: https://github.com/kylertlove/Aquarius.git
+Install Link: https://fabricmc.net/use/
+              https://fabricmc.net/wiki/doku.php
 
 Ore Generation Example: https://github.com/abused/SuperOres/blob/1.14-Fabric/src/main/java/abused_master/superores/registry/ModBlocks.java
 
