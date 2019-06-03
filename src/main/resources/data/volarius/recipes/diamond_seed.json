@@ -1,0 +1,10 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+      {"item":"minecraft:diamond"},
+      {"item":"minecraft:wheat_seeds"}
+  ],
+  "result": {
+    "item": "volarius:diamond_seed"
+  }
+}

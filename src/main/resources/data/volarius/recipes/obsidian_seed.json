@@ -1,0 +1,10 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+      {"item":"minecraft:obsidian"},
+      {"item":"minecraft:wheat_seeds"}
+  ],
+  "result": {
+    "item": "volarius:obsidian_seed"
+  }
+}

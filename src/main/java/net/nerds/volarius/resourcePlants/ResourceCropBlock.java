@@ -34,7 +34,7 @@ public class ResourceCropBlock extends BeetrootsBlock {
 
     @Override
     public Identifier getDropTableId() {
-        Identifier identifier_1 = Registry.BLOCK.getId(this);
-        return new Identifier(identifier_1.getNamespace(), "blocks/" + identifier_1.getPath());
+        Identifier identifier = Registry.BLOCK.getId(this);
+        return new Identifier(identifier.getNamespace(), "blocks/" + identifier.getPath());
     }
 }

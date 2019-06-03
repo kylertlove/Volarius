@@ -1,6 +1,6 @@
 {
-    "parent": "block/cross",
+    "parent": "block/crop",
     "textures": {
-        "cross": "volarius:block/coal_plant_2"
+        "crop": "volarius:block/coal_plant_2"
     }
 }

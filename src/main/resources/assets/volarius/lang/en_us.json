@@ -1,3 +1,12 @@
 {
-    "item.volarius.coal_seed": "Coal Seed"
+    "item.volarius.coal_seed": "Coal Seed",
+    "item.volarius.bone_seed": "Bone Seed",
+    "item.volarius.iron_seed": "Iron Seed",
+    "item.volarius.gold_seed": "Gold Seed",
+    "item.volarius.diamond_seed": "Diamond Seed",
+    "item.volarius.emerald_seed": "Emerald Seed",
+    "item.volarius.lapis_seed": "Lapis Seed",
+    "item.volarius.redstone_seed": "Redstone Seed",
+    "item.volarius.obsidian_seed": "Obsidian Seed",
+    "item.volarius.nether_star_seed": "Nether Star Seed"
 }

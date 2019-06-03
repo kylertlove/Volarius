@@ -1,0 +1,10 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+      {"item":"minecraft:nether_star"},
+      {"item":"minecraft:wheat_seeds"}
+  ],
+  "result": {
+    "item": "volarius:nether_star_seed"
+  }
+}

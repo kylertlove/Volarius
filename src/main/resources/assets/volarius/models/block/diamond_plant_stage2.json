@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "volarius:block/diamond_plant_2"
+    }
+}

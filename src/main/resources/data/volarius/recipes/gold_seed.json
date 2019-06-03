@@ -1,0 +1,10 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+      {"item":"minecraft:gold_ingot"},
+      {"item":"minecraft:wheat_seeds"}
+  ],
+  "result": {
+    "item": "volarius:gold_seed"
+  }
+}
