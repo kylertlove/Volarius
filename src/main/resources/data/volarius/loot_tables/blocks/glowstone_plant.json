@@ -73,7 +73,7 @@
               }
             }
           ],
-          "name": "volarius:minecraft:glowstone_dust"
+          "name": "minecraft:glowstone_dust"
         }
       ],
       "conditions": [

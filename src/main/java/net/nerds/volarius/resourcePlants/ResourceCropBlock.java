@@ -7,16 +7,20 @@ import net.minecraft.block.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.state.StateFactory;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Random;
 
 public class ResourceCropBlock extends BeetrootsBlock {
 
     private Item seedType;
+    private static int luminance = 0;
 
     public ResourceCropBlock(Item seedType) {
         super(FabricBlockSettings
@@ -24,7 +28,7 @@ public class ResourceCropBlock extends BeetrootsBlock {
                 .breakInstantly()
                 .noCollision()
                 .ticksRandomly()
-                .lightLevel(getLightLevel(seedType))
+                .lightLevel(luminance)
                 .sounds(BlockSoundGroup.CROP)
                 .build());
         this.seedType = seedType;
@@ -47,11 +51,4 @@ public class ResourceCropBlock extends BeetrootsBlock {
             super.onScheduledTick(blockState, world, blockPos, random);
     }
 
-    private static int getLightLevel(Item seedType) {
-        if(seedType == ResourceCropItems.REDSTONE_SEED) {
-            return 15;
-        } else {
-            return 0;
-        }
-    }
 }
