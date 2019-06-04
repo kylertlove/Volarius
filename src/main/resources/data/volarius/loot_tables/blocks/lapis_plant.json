@@ -29,7 +29,7 @@
       ]
     },
     {
-      "rolls": 0.3,
+      "rolls": 1.0,
       "entries": [
         {
           "type": "minecraft:item",
@@ -40,7 +40,7 @@
               "formula": "minecraft:binomial_with_bonus_count",
               "parameters": {
                 "extra": 3,
-                "probability": 0.5714286
+                "probability": 0.2714286
               }
             }
           ],
