@@ -26,7 +26,10 @@ public class ResourceCropBlocks {
             Registry.register(Registry.BLOCK, new Identifier(Volarius.MODID, "obsidian_plant"), new ResourceCropBlock(ResourceCropItems.OBSIDIAN_SEED));
     public static final ResourceCropBlock NETHER_STAR_PLANT =
             Registry.register(Registry.BLOCK, new Identifier(Volarius.MODID, "nether_star_plant"), new ResourceCropBlock(ResourceCropItems.NETHER_STAR_SEED));
-
+    public static final ResourceCropBlock GLOWSTONE_PLANT =
+            Registry.register(Registry.BLOCK, new Identifier(Volarius.MODID, "glowstone_plant"), new ResourceCropBlock(ResourceCropItems.GLOWSTONE_SEED));
+    public static final ResourceCropBlock NETHER_QUARTZ_PLANT =
+            Registry.register(Registry.BLOCK, new Identifier(Volarius.MODID, "nether_quartz_plant"), new ResourceCropBlock(ResourceCropItems.NETHER_QUARTZ_SEED));
 
 
     public static void init() {

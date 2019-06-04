@@ -11,8 +11,8 @@ import net.nerds.volarius.resourcePlants.ResourcePlantManager;
 public class Volarius implements ModInitializer {
 
     public static final String MODID = "volarius";
-    public static ItemGroup modItemGroup = FabricItemGroupBuilder
-            .build(new Identifier(MODID, MODID), () -> new ItemStack(ResourceCropItems.NETHER_STAR_SEED));
+    public static ItemGroup resourceCropItemGroup = FabricItemGroupBuilder
+            .build(new Identifier(MODID, MODID), () -> new ItemStack(ResourceCropItems.OBSIDIAN_SEED));
 
     @Override
     public void onInitialize() {

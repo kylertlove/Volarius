@@ -8,5 +8,7 @@
     "item.volarius.lapis_seed": "Lapis Seed",
     "item.volarius.redstone_seed": "Redstone Seed",
     "item.volarius.obsidian_seed": "Obsidian Seed",
-    "item.volarius.nether_star_seed": "Nether Star Seed"
+    "item.volarius.nether_star_seed": "Nether Star Seed",
+    "item.volarius.nether_quartz_seed": "Nether Quartz Seed",
+    "item.volarius.glowstone_seed": "Glowstone Seed"
 }

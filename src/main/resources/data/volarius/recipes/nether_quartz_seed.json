@@ -1,3 +1,4 @@
+
 {
   "type": "crafting_shaped",
   "pattern": [
@@ -7,13 +8,13 @@
   ],
   "key": {
     "b": {
-      "item": "minecraft:coal"
+      "item": "minecraft:quartz"
     },
     "w": {
       "item": "minecraft:wheat_seeds"
     }
   },
   "result": {
-    "item": "volarius:coal_seed"
+    "item": "volarius:nether_quartz_seed"
   }
 }

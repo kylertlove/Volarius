@@ -56,6 +56,35 @@
           }
         }
       ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:binomial_with_bonus_count",
+              "parameters": {
+                "extra": 3,
+                "probability": 0.3714286
+              }
+            }
+          ],
+          "name": "minecraft:coal"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "volarius:coal_plant",
+          "properties": {
+            "age": "3"
+          }
+        }
+      ]
     }
   ],
   "functions": [

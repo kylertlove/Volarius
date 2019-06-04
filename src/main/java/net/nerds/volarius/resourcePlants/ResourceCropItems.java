@@ -20,6 +20,8 @@ public class ResourceCropItems {
     public static Item REDSTONE_SEED;
     public static Item OBSIDIAN_SEED;
     public static Item NETHER_STAR_SEED;
+    public static Item GLOWSTONE_SEED;
+    public static Item NETHER_QUARTZ_SEED;
 
     public static void init() {
         COAL_SEED = Registry.register(Registry.ITEM,
@@ -52,9 +54,15 @@ public class ResourceCropItems {
         NETHER_STAR_SEED = Registry.register(Registry.ITEM,
                 new Identifier(Volarius.MODID, "nether_star_seed"),
                 new AliasedBlockItem(ResourceCropBlocks.NETHER_STAR_PLANT, getItemSettings()));
+        GLOWSTONE_SEED = Registry.register(Registry.ITEM,
+                new Identifier(Volarius.MODID, "glowstone_seed"),
+                new AliasedBlockItem(ResourceCropBlocks.GLOWSTONE_PLANT, getItemSettings()));
+        NETHER_QUARTZ_SEED = Registry.register(Registry.ITEM,
+                new Identifier(Volarius.MODID, "nether_quartz_seed"),
+                new AliasedBlockItem(ResourceCropBlocks.NETHER_QUARTZ_PLANT, getItemSettings()));
     }
 
     private static Item.Settings getItemSettings() {
-        return (new Item.Settings().itemGroup(Volarius.modItemGroup).stackSize(64).recipeRemainder(Items.WHEAT_SEEDS));
+        return (new Item.Settings().itemGroup(Volarius.resourceCropItemGroup).stackSize(64).recipeRemainder(Items.WHEAT_SEEDS));
     }
 }

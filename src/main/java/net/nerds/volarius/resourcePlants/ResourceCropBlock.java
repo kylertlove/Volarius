@@ -24,6 +24,7 @@ public class ResourceCropBlock extends BeetrootsBlock {
                 .breakInstantly()
                 .noCollision()
                 .ticksRandomly()
+                .lightLevel(getLightLevel(seedType))
                 .sounds(BlockSoundGroup.CROP)
                 .build());
         this.seedType = seedType;
@@ -44,12 +45,13 @@ public class ResourceCropBlock extends BeetrootsBlock {
     @Override
     public void onScheduledTick(BlockState blockState, World world, BlockPos blockPos, Random random) {
             super.onScheduledTick(blockState, world, blockPos, random);
+    }
 
-
-            if(seedType == ResourceCropItems.REDSTONE_SEED) {
-                if(this.getAge(blockState) == 3) {
-                    //set light level higher
-                }
-            }
+    private static int getLightLevel(Item seedType) {
+        if(seedType == ResourceCropItems.REDSTONE_SEED) {
+            return 15;
+        } else {
+            return 0;
+        }
     }
 }

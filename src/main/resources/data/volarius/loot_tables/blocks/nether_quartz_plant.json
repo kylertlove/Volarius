@@ -12,17 +12,17 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "volarius:bone_plant",
+                  "block": "volarius:nether_quartz_plant",
                   "properties": {
                     "age": "3"
                   }
                 }
               ],
-              "name": "minecraft:bone_meal"
+              "name": "minecraft:quartz"
             },
             {
               "type": "minecraft:item",
-              "name": "volarius:bone_seed"
+              "name": "volarius:nether_quartz_seed"
             }
           ]
         }
@@ -44,42 +44,13 @@
               }
             }
           ],
-          "name": "volarius:bone_seed"
+          "name": "volarius:nether_quartz_seed"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "volarius:bone_plant",
-          "properties": {
-            "age": "3"
-          }
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:binomial_with_bonus_count",
-              "parameters": {
-                "extra": 5,
-                "probability": 0.3714286
-              }
-            }
-          ],
-          "name": "volarius:minecraft:bone_meal"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:block_state_property",
-          "block": "volarius:bone_plant",
+          "block": "volarius:nether_quartz_plant",
           "properties": {
             "age": "3"
           }

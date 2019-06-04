@@ -12,17 +12,17 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "volarius:bone_plant",
+                  "block": "volarius:glowstone_plant",
                   "properties": {
                     "age": "3"
                   }
                 }
               ],
-              "name": "minecraft:bone_meal"
+              "name": "minecraft:glowstone_dust"
             },
             {
               "type": "minecraft:item",
-              "name": "volarius:bone_seed"
+              "name": "volarius:glowstone_seed"
             }
           ]
         }
@@ -44,13 +44,13 @@
               }
             }
           ],
-          "name": "volarius:bone_seed"
+          "name": "volarius:glowstone_seed"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "volarius:bone_plant",
+          "block": "volarius:glowstone_plant",
           "properties": {
             "age": "3"
           }
@@ -73,13 +73,13 @@
               }
             }
           ],
-          "name": "volarius:minecraft:bone_meal"
+          "name": "volarius:minecraft:glowstone_dust"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "volarius:bone_plant",
+          "block": "volarius:glowstone_plant",
           "properties": {
             "age": "3"
           }
