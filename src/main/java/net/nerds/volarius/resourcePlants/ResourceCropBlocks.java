@@ -1,11 +1,17 @@
 package net.nerds.volarius.resourcePlants;
 
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.nerds.volarius.Volarius;
+import net.nerds.volarius.resourcePlants.farmer.FarmingUnit;
 
 public class ResourceCropBlocks {
 
+    /**
+     * Register/declare all resouce crops
+     */
     public static final ResourceCropBlock COAL_PLANT =
             Registry.register(Registry.BLOCK, new Identifier(Volarius.MODID, "coal_plant"), new ResourceCropBlock(ResourceCropItems.COAL_SEED));
     public static final ResourceCropBlock BONE_PLANT =
@@ -32,6 +38,14 @@ public class ResourceCropBlocks {
             Registry.register(Registry.BLOCK, new Identifier(Volarius.MODID, "nether_quartz_plant"), new ResourceCropBlock(ResourceCropItems.NETHER_QUARTZ_SEED));
 
 
+    //Farming Unit Block
+    public static final FarmingUnit FARMING_UNIT = new FarmingUnit();
+
+
     public static void init() {
+        Registry.register(Registry.BLOCK, new Identifier(Volarius.MODID, "farming_unit"), FARMING_UNIT);
+        Registry.register(Registry.ITEM,
+                new Identifier(Volarius.MODID, "farming_unit"),
+                new BlockItem(FARMING_UNIT, new Item.Settings().itemGroup(Volarius.resourceCropItemGroup)));
     }
 }

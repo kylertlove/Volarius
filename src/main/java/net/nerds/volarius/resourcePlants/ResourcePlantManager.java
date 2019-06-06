@@ -6,5 +6,7 @@ public class ResourcePlantManager {
 
         ResourceCropItems.init();
         ResourceCropBlocks.init();
+        ResourceCropBlockEntities.init();
+        ResourceCropBlockEntities.initGui();
     }
 }

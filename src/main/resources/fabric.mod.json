@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.nerds.volarius.Volarius"
+    ],
+    "client": [
+      "net.nerds.volarius.VolariusClient"
     ]
   },
   "mixins": [
