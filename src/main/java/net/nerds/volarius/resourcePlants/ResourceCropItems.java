@@ -22,6 +22,7 @@ public class ResourceCropItems {
     public static Item NETHER_STAR_SEED;
     public static Item GLOWSTONE_SEED;
     public static Item NETHER_QUARTZ_SEED;
+    public static Item ENDER_PEARL_SEED;
 
     public static void init() {
         COAL_SEED = Registry.register(Registry.ITEM,
@@ -60,6 +61,9 @@ public class ResourceCropItems {
         NETHER_QUARTZ_SEED = Registry.register(Registry.ITEM,
                 new Identifier(Volarius.MODID, "nether_quartz_seed"),
                 new AliasedBlockItem(ResourceCropBlocks.NETHER_QUARTZ_PLANT, getItemSettings()));
+        ENDER_PEARL_SEED = Registry.register(Registry.ITEM,
+                new Identifier(Volarius.MODID, "ender_pearl_seed"),
+                new AliasedBlockItem(ResourceCropBlocks.ENDER_PEARL_PLANT, getItemSettings()));
     }
 
     private static Item.Settings getItemSettings() {
