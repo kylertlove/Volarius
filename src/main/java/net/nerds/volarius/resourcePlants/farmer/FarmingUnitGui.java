@@ -11,21 +11,20 @@ import net.nerds.volarius.Volarius;
 @Environment(EnvType.CLIENT)
 public class FarmingUnitGui extends AbstractContainerScreen {
 
-    public Identifier farmerGui = new Identifier(Volarius.MODID, "textures/gui/farming_unit_gui.png");
+    public Identifier farmerGui = new Identifier(Volarius.MODID, "textures/gui/farming_unit_gui1.png");
     public FarmingUnitBlockEntity tile;
-    public int guiLeft, guiTop;
-
+    private final int rows;
 
     public FarmingUnitGui(FarmingUnitBlockEntity farmingUnitBlockEntity, FarmingUnitContainer farmingUnitContainer) {
         super(farmingUnitContainer, farmingUnitContainer.playerInventory, new TextComponent("farming_unit"));
         this.tile = farmingUnitBlockEntity;
+        this.rows = farmingUnitContainer.getRows();
+        this.containerHeight = 114 + this.rows * 18;
     }
 
     @Override
     protected void init() {
         super.init();
-        this.guiLeft = (this.width - this.containerWidth) / 2;
-        this.guiTop = (this.height - this.containerHeight) / 2;
     }
 
     @Override
@@ -37,14 +36,17 @@ public class FarmingUnitGui extends AbstractContainerScreen {
 
     @Override
     public void drawForeground(int int_1, int int_2) {
-        String string_1 = "Farmer";
-        this.font.draw(string_1, (float) (this.containerWidth / 2 - this.font.getStringWidth(string_1) / 2), 6.0F, 4210752);
+        this.font.draw("Farmer", 8.0F, 6.0F, 4210752);
+        this.font.draw(this.playerInventory.getDisplayName().getFormattedText(), 8.0F, (float)(this.containerHeight - 96 + 2), 4210752);
     }
 
     @Override
     public void drawBackground(float v, int i, int i1) {
         GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F);
-        minecraft.getTextureManager().bindTexture(farmerGui);
-        blit(guiLeft, guiTop, 0, 0, containerWidth, containerHeight);
+        this.minecraft.getTextureManager().bindTexture(farmerGui);
+        int int_3 = (this.width - this.containerWidth) / 2;
+        int int_4 = (this.height - this.containerHeight) / 2;
+        this.blit(int_3, int_4, 0, 0, this.containerWidth, this.rows * 18 + 17);
+        this.blit(int_3, int_4 + this.rows * 18 + 17, 0, 126, this.containerWidth, 96);
     }
 }

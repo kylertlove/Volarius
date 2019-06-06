@@ -1,20 +1,21 @@
 package net.nerds.volarius.resourcePlants.farmer;
 
-import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.LootableContainerBlockEntity;
+import net.minecraft.container.Container;
+import net.minecraft.container.GenericContainer;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
-import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.util.DefaultedList;
-import net.minecraft.util.Tickable;
-import net.minecraft.util.math.Direction;
 import net.nerds.volarius.resourcePlants.ResourceCropBlockEntities;
 
 import java.util.Iterator;
 
-public class FarmingUnitBlockEntity extends BlockEntity implements Tickable, BlockEntityClientSerializable, SidedInventory {
+public class FarmingUnitBlockEntity extends LootableContainerBlockEntity {
 
     private int tickCounter = 0; //counter to validate if waited
     private int tickValidator = 20; //how many ticks to wait
@@ -22,41 +23,7 @@ public class FarmingUnitBlockEntity extends BlockEntity implements Tickable, Blo
 
     public FarmingUnitBlockEntity() {
         super(ResourceCropBlockEntities.FARMING_UNIT_ENTITY);
-        inventory = DefaultedList.create(12, ItemStack.EMPTY);
-    }
-
-    @Override
-    public void tick() {
-
-    }
-
-    @Override
-    public void fromClientTag(CompoundTag nbt) {
-        this.fromTag(nbt);
-        inventory = DefaultedList.create(12, ItemStack.EMPTY);
-        Inventories.fromTag(nbt, this.inventory);
-    }
-
-    @Override
-    public CompoundTag toClientTag(CompoundTag nbt) {
-        super.toTag(nbt);
-        Inventories.toTag(nbt, this.inventory);
-        return nbt;
-    }
-
-    @Override
-    public int[] getInvAvailableSlots(Direction direction) {
-        return new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
-    }
-
-    @Override
-    public boolean canInsertInvStack(int i, ItemStack var2, Direction var3) {
-        return i == 1 || i == 2 || i == 3 || i == 4;
-    }
-
-    @Override
-    public boolean canExtractInvStack(int i, ItemStack var2, Direction var3) {
-        return i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11;
+        inventory = DefaultedList.create(54, ItemStack.EMPTY);
     }
 
     @Override
@@ -67,16 +34,13 @@ public class FarmingUnitBlockEntity extends BlockEntity implements Tickable, Blo
     @Override
     public boolean isInvEmpty() {
         Iterator var1 = this.inventory.iterator();
-
         ItemStack itemStack_1;
         do {
             if (!var1.hasNext()) {
                 return true;
             }
-
             itemStack_1 = (ItemStack)var1.next();
         } while(itemStack_1.isEmpty());
-
         return false;
     }
 
@@ -119,5 +83,25 @@ public class FarmingUnitBlockEntity extends BlockEntity implements Tickable, Blo
     @Override
     public void clear() {
         inventory.clear();
+    }
+
+    @Override
+    protected DefaultedList<ItemStack> getInvStackList() {
+        return this.inventory;
+    }
+
+    @Override
+    protected void setInvStackList(DefaultedList<ItemStack> inventory) {
+        this.inventory = inventory;
+    }
+
+    @Override
+    protected Component getContainerName() {
+        return new TranslatableComponent("container.farming_unit", new Object[0]);
+    }
+
+    @Override
+    protected Container createContainer(int i, PlayerInventory playerInventory) {
+        return GenericContainer.createGeneric9x6(i, playerInventory, this);
     }
 }
