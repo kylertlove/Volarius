@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "volarius:block/ender_pearl_plant_1"
+    }
+}
