@@ -5,6 +5,8 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import net.nerds.volarius.machines.MachineBlockManager;
+import net.nerds.volarius.toolsAndGear.ToolsAndGearManager;
 import net.nerds.volarius.resourcePlants.ResourceCropItems;
 import net.nerds.volarius.resourcePlants.ResourcePlantManager;
 
@@ -17,5 +19,7 @@ public class Volarius implements ModInitializer {
     @Override
     public void onInitialize() {
        ResourcePlantManager.init();
+       MachineBlockManager.init();
+       ToolsAndGearManager.init();
     }
 }

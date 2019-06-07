@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.nerds.volarius.Volarius;
-import net.nerds.volarius.resourcePlants.farmer.FarmingUnit;
+import net.nerds.volarius.machines.farmer.FarmingUnit;
 
 public class ResourceCropBlocks {
 
@@ -39,15 +39,7 @@ public class ResourceCropBlocks {
     public static final ResourceCropBlock ENDER_PEARL_PLANT =
             Registry.register(Registry.BLOCK, new Identifier(Volarius.MODID, "ender_pearl_plant"), new ResourceCropBlock(ResourceCropItems.ENDER_PEARL_SEED));
 
-
-    //Farming Unit Block
-    public static final FarmingUnit FARMING_UNIT = new FarmingUnit();
-
-
     public static void init() {
-        Registry.register(Registry.BLOCK, new Identifier(Volarius.MODID, "farming_unit"), FARMING_UNIT);
-        Registry.register(Registry.ITEM,
-                new Identifier(Volarius.MODID, "farming_unit"),
-                new BlockItem(FARMING_UNIT, new Item.Settings().itemGroup(Volarius.resourceCropItemGroup)));
+
     }
 }

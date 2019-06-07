@@ -1,4 +1,4 @@
-package net.nerds.volarius.resourcePlants.farmer;
+package net.nerds.volarius.machines.farmer;
 
 
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
@@ -11,7 +11,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.nerds.volarius.resourcePlants.ResourceCropBlockEntities;
+import net.nerds.volarius.machines.MachineBlockEntities;
 
 public class FarmingUnit extends Block implements BlockEntityProvider {
 
@@ -27,7 +27,7 @@ public class FarmingUnit extends Block implements BlockEntityProvider {
     @Override
     public boolean activate(BlockState state, World world, BlockPos blockPos, PlayerEntity player, Hand hand, BlockHitResult blockHitResult) {
         if (!world.isClient) {
-            ContainerProviderRegistry.INSTANCE.openContainer(ResourceCropBlockEntities.FARMER_CONTAINER, player, buf -> buf.writeBlockPos(blockPos));
+            ContainerProviderRegistry.INSTANCE.openContainer(MachineBlockEntities.FARMER_CONTAINER, player, buf -> buf.writeBlockPos(blockPos));
         }
         return true;
     }

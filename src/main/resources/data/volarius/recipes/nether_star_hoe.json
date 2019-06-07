@@ -1,0 +1,20 @@
+
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "bb ",
+    " w ",
+    " w "
+  ],
+  "key": {
+    "b": {
+      "item": "minecraft:nether_star"
+    },
+    "w": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "volarius:nether_star_hoe"
+  }
+}

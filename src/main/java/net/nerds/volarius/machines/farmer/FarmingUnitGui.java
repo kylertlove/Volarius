@@ -1,4 +1,4 @@
-package net.nerds.volarius.resourcePlants.farmer;
+package net.nerds.volarius.machines.farmer;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.fabricmc.api.EnvType;

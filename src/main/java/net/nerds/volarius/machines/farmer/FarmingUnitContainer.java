@@ -1,4 +1,4 @@
-package net.nerds.volarius.resourcePlants.farmer;
+package net.nerds.volarius.machines.farmer;
 
 import net.minecraft.container.ContainerType;
 import net.minecraft.container.GenericContainer;
@@ -18,7 +18,6 @@ public class FarmingUnitContainer extends GenericContainer {
         this.inventory = inventory;
         this.playerInventory = playerInventory;
         this.world = playerInventory.player.world;
-
     }
 
     @Override
