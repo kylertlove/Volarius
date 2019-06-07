@@ -17,6 +17,7 @@ public class MachineBlockManager {
 
 		MachineBlockEntities.init();
 		MachineBlockEntities.initGui();
+		blockInit();
 	}
 
 	private static void blockInit() {

@@ -40,6 +40,10 @@ public class ResourceCropBlock extends BeetrootsBlock {
         return this.seedType;
     }
 
+    /**
+     * Need to override because it is returning air on block break
+     * @return
+     */
     @Override
     public Identifier getDropTableId() {
         Identifier identifier = Registry.BLOCK.getId(this);

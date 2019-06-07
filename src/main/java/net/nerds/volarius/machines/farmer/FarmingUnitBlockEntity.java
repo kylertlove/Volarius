@@ -50,7 +50,12 @@ public class FarmingUnitBlockEntity extends BlockEntity implements Tickable, Blo
 
     @Override
     public void tick() {
-
+        if(tickCounter >= tickValidator) {
+            tickCounter = 0;
+            System.out.println("try to farm");
+        } else {
+            tickCounter++;
+        }
     }
 
     @Override
