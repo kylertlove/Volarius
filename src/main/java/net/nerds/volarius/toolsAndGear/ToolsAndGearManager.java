@@ -7,7 +7,6 @@ import net.minecraft.util.registry.Registry;
 import net.nerds.volarius.Volarius;
 import net.nerds.volarius.toolsAndGear.netherStarTools.*;
 
-
 public class ToolsAndGearManager {
 
 	public static ArmorBase netherStarHelmet;

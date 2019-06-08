@@ -11,7 +11,7 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum VolariusArmorMaterials implements ArmorMaterial {
-	NETHER_STAR_ARMOR_MATERIAL("nether_star_material", new int[]{7, 10, 12, 7}, new int[]{1000, 1300, 1200, 1100}, 30, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> {
+	NETHER_STAR_ARMOR_MATERIAL("nether_star_material", new int[]{7, 10, 12, 7}, new int[]{1000, 1300, 1200, 1100}, 30, 18, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> {
 		return Ingredient.ofItems(Items.NETHER_STAR);
 	});
 
