@@ -1,4 +1,4 @@
-package net.nerds.volarius.machines.farmer;
+package net.nerds.volarius.machines.fishTrap;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.fabricmc.api.EnvType;
@@ -9,15 +9,15 @@ import net.minecraft.util.Identifier;
 import net.nerds.volarius.Volarius;
 
 @Environment(EnvType.CLIENT)
-public class FarmingUnitGui extends AbstractContainerScreen {
-    public Identifier farmerGui = new Identifier(Volarius.MODID, "textures/gui/farming_unit_gui1.png");
-    public FarmingUnitBlockEntity tile;
+public class FishTrapGui extends AbstractContainerScreen {
+    public Identifier fishGui = new Identifier(Volarius.MODID, "textures/gui/fish_trap_gui.png");
+    public FishTrapBlockEntity tile;
     private final int rows;
 
-    public FarmingUnitGui(FarmingUnitBlockEntity farmingUnitBlockEntity, FarmingUnitContainer farmingUnitContainer) {
-        super(farmingUnitContainer, farmingUnitContainer.playerInventory, new TextComponent("farming_unit"));
-        this.tile = farmingUnitBlockEntity;
-        this.rows = farmingUnitContainer.getRows();
+    public FishTrapGui(FishTrapBlockEntity fishTrapBlockEntity, FishTrapContainer fishTrapContainer) {
+        super(fishTrapContainer, fishTrapContainer.playerInventory, new TextComponent("fish_trap"));
+        this.tile = fishTrapBlockEntity;
+        this.rows = fishTrapContainer.getRows();
         this.containerHeight = 114 + this.rows * 18;
     }
 
@@ -35,14 +35,14 @@ public class FarmingUnitGui extends AbstractContainerScreen {
 
     @Override
     public void drawForeground(int int_1, int int_2) {
-        this.font.draw("Farming Unit", 8.0F, 6.0F, 4210752);
+        this.font.draw("Fish Trap", 8.0F, 6.0F, 4210752);
         this.font.draw(this.playerInventory.getDisplayName().getFormattedText(), 8.0F, (float)(this.containerHeight - 96 + 2), 4210752);
     }
 
     @Override
     public void drawBackground(float v, int i, int i1) {
         GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.minecraft.getTextureManager().bindTexture(farmerGui);
+        this.minecraft.getTextureManager().bindTexture(fishGui);
         int int_3 = (this.width - this.containerWidth) / 2;
         int int_4 = (this.height - this.containerHeight) / 2;
         this.blit(int_3, int_4, 0, 0, this.containerWidth, this.rows * 18 + 17);

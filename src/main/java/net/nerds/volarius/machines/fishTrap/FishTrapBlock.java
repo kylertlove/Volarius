@@ -1,17 +1,11 @@
-package net.nerds.volarius.machines.farmer;
+package net.nerds.volarius.machines.fishTrap;
 
-
-import com.google.common.collect.Lists;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.ItemScatterer;
@@ -20,28 +14,23 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.loot.context.LootContext;
 import net.nerds.volarius.machines.MachineBlockEntities;
 
-import java.util.List;
+public class FishTrapBlock extends Block implements BlockEntityProvider {
 
-public class FarmingUnit extends Block implements BlockEntityProvider {
 
-    public static final DirectionProperty FACING = Properties.FACING;
-
-    public FarmingUnit() {
-        super(FabricBlockSettings.of(Material.STONE).hardness(3.5f).build());
+    public FishTrapBlock() {
+        super(FabricBlockSettings.of(Material.WOOD).hardness(3.5f).build());
     }
 
     @Override
-    public BlockEntity createBlockEntity(BlockView blockView) {
-        return new FarmingUnitBlockEntity();
+    public BlockEntity createBlockEntity(BlockView var1) {
+        return new FishTrapBlockEntity();
     }
-
     @Override
     public boolean activate(BlockState state, World world, BlockPos blockPos, PlayerEntity player, Hand hand, BlockHitResult blockHitResult) {
         if (!world.isClient) {
-            ContainerProviderRegistry.INSTANCE.openContainer(MachineBlockEntities.FARMER_CONTAINER, player, buf -> buf.writeBlockPos(blockPos));
+            ContainerProviderRegistry.INSTANCE.openContainer(MachineBlockEntities.FISH_TRAP_CONTAINER, player, buf -> buf.writeBlockPos(blockPos));
         }
         return true;
     }

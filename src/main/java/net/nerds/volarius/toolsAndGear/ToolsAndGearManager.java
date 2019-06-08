@@ -9,15 +9,15 @@ import net.nerds.volarius.toolsAndGear.netherStarTools.*;
 
 public class ToolsAndGearManager {
 
-	public static ArmorBase netherStarHelmet;
-	public static ArmorBase netherStarChest;
-	public static ArmorBase netherStarLeggings;
-	public static ArmorBase netherStarBoots;
-	public static Item NETHER_SWORD = new NetherStarSword(VolariusToolMaterials.NETHER_STAR, 9, -2.4f);
-	public static Item NETHER_AXE = new NetherStarAxe(VolariusToolMaterials.NETHER_STAR, 10, -3.0F);
-	public static Item NETHER_SHOVEL = new NetherStarShovel(VolariusToolMaterials.NETHER_STAR, 3, -3.0F);
-	public static Item NETHER_HOE = new NetherStarHoe(VolariusToolMaterials.NETHER_STAR, 3, 0.0f);
-	public static Item NETHER_PICK = new NetherStarPick(VolariusToolMaterials.NETHER_STAR, 3, -2.8F);
+	private static ArmorBase netherStarHelmet;
+	private static ArmorBase netherStarChest;
+	private static ArmorBase netherStarLeggings;
+	private static ArmorBase netherStarBoots;
+	private static Item netherStarSword = new NetherStarSword(VolariusToolMaterials.NETHER_STAR, 9, -2.4f);
+	private static Item netherStarAxe = new NetherStarAxe(VolariusToolMaterials.NETHER_STAR, 10, -3.0F);
+	private static Item netherStarShovel = new NetherStarShovel(VolariusToolMaterials.NETHER_STAR, 3, -3.0F);
+	private static Item netherStarHoe = new NetherStarHoe(VolariusToolMaterials.NETHER_STAR, 3, 0.0f);
+	private static Item netherStarPick = new NetherStarPick(VolariusToolMaterials.NETHER_STAR, 3, -2.8F);
 
 	public static void init() {
 		/**
@@ -39,10 +39,10 @@ public class ToolsAndGearManager {
 		/**
 		 * Tools
 		 */
-		Registry.register(Registry.ITEM, new Identifier(Volarius.MODID, "nether_star_sword"), NETHER_SWORD);
-		Registry.register(Registry.ITEM, new Identifier(Volarius.MODID, "nether_star_axe"), NETHER_AXE);
-		Registry.register(Registry.ITEM, new Identifier(Volarius.MODID, "nether_star_pick"), NETHER_PICK);
-		Registry.register(Registry.ITEM, new Identifier(Volarius.MODID, "nether_star_shovel"), NETHER_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier(Volarius.MODID, "nether_star_hoe"), NETHER_HOE);
+		Registry.register(Registry.ITEM, new Identifier(Volarius.MODID, "nether_star_sword"), netherStarSword);
+		Registry.register(Registry.ITEM, new Identifier(Volarius.MODID, "nether_star_axe"), netherStarAxe);
+		Registry.register(Registry.ITEM, new Identifier(Volarius.MODID, "nether_star_pick"), netherStarPick);
+		Registry.register(Registry.ITEM, new Identifier(Volarius.MODID, "nether_star_shovel"), netherStarShovel);
+		Registry.register(Registry.ITEM, new Identifier(Volarius.MODID, "nether_star_hoe"), netherStarHoe);
 	}
 }

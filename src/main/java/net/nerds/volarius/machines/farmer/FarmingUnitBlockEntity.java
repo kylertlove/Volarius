@@ -87,7 +87,6 @@ public class FarmingUnitBlockEntity extends BlockEntity implements Tickable, Blo
             if (!var1.hasNext()) {
                 return true;
             }
-
             itemStack_1 = (ItemStack)var1.next();
         } while(itemStack_1.isEmpty());
 
