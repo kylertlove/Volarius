@@ -1,10 +1,10 @@
 # Volarius
-Minecraft Mod
+Minecraft mod that has all of my testing and work to break out into individual mods
 
 
-Install Link: https://fabricmc.net/use/
+Install Links: 
+
+              https://fabricmc.net/use/
+
               https://fabricmc.net/wiki/doku.php
 
-Ore Generation Example: https://github.com/abused/SuperOres/blob/1.14-Fabric/src/main/java/abused_master/superores/registry/ModBlocks.java
-
-Crop Example: https://github.com/NerdHubMC/Sweed/blob/master/src/main/java/nerdhub/sweed/block/SweedBlock.java

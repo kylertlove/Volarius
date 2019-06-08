@@ -131,7 +131,7 @@ public class FarmingUnitBlockEntity extends BlockEntity implements Tickable, Blo
      */
     private void attemptHarvest() {
         if(!world.isClient) {
-            List<ItemStack> drops = new ArrayList<>();
+            List<ItemStack> drops;
             Iterable<BlockPos> farmingArea = BlockPos.iterate(new BlockPos(pos.getX() - farmingRange, pos.getY(), pos.getZ() - farmingRange),
                     new BlockPos(pos.getX() + farmingRange, pos.getY(), pos.getZ() + farmingRange));
             for(BlockPos blockPos : farmingArea) {

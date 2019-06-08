@@ -36,7 +36,7 @@ public class FarmingUnitGui extends AbstractContainerScreen {
 
     @Override
     public void drawForeground(int int_1, int int_2) {
-        this.font.draw("Farmer", 8.0F, 6.0F, 4210752);
+        this.font.draw("Farming Unit", 8.0F, 6.0F, 4210752);
         this.font.draw(this.playerInventory.getDisplayName().getFormattedText(), 8.0F, (float)(this.containerHeight - 96 + 2), 4210752);
     }
 

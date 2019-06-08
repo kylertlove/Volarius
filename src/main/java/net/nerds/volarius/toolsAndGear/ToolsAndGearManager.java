@@ -5,8 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.nerds.volarius.Volarius;
-import net.nerds.volarius.toolsAndGear.netherStarTools.NetherStarAxe;
-import net.nerds.volarius.toolsAndGear.netherStarTools.NetherStarSword;
+import net.nerds.volarius.toolsAndGear.netherStarTools.*;
 
 
 public class ToolsAndGearManager {
@@ -15,14 +14,14 @@ public class ToolsAndGearManager {
 	public static ArmorBase netherStarChest;
 	public static ArmorBase netherStarLeggings;
 	public static ArmorBase netherStarBoots;
-	public static Item NETHER_SWORD = new NetherStarSword(VolariusToolMaterials.NETHER_STAR, 5, -2.4f);
-	public static Item NETHER_AXE = new NetherStarAxe(VolariusToolMaterials.NETHER_STAR, 8, -3.0F);
-	public static Item NETHER_SHOVEL = new NetherStarAxe(VolariusToolMaterials.NETHER_STAR, 2, -3.0F);
-	public static Item NETHER_HOE = new NetherStarAxe(VolariusToolMaterials.NETHER_STAR, 2, -2.8F);
-	public static Item NETHER_PICK = new NetherStarAxe(VolariusToolMaterials.NETHER_STAR, 2, 0.0F);
+	public static Item NETHER_SWORD = new NetherStarSword(VolariusToolMaterials.NETHER_STAR, 9, -2.4f);
+	public static Item NETHER_AXE = new NetherStarAxe(VolariusToolMaterials.NETHER_STAR, 10, -3.0F);
+	public static Item NETHER_SHOVEL = new NetherStarShovel(VolariusToolMaterials.NETHER_STAR, 3, -3.0F);
+	public static Item NETHER_HOE = new NetherStarHoe(VolariusToolMaterials.NETHER_STAR, 3, 0.0f);
+	public static Item NETHER_PICK = new NetherStarPick(VolariusToolMaterials.NETHER_STAR, 3, -2.8F);
 
 	public static void init() {
-		/**nether_star_sword.json
+		/**
 		 * Armor
 		 */
 		netherStarHelmet = Registry.register(Registry.ITEM,

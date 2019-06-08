@@ -16,11 +16,10 @@ public class VolariusClient implements ClientModInitializer {
     }
 
     private void registerClientGuis() {
-        System.out.println("--------------------------------------------GUI Register----------------------------------");
         ScreenProviderRegistry.INSTANCE.registerFactory(MachineBlockEntities.FARMER_CONTAINER, ((syncid, identifier, player, buf) -> {
             BlockPos pos = buf.readBlockPos();
-            FarmingUnitBlockEntity farmer = (FarmingUnitBlockEntity) player.world.getBlockEntity(pos);
-            return new FarmingUnitGui(farmer, new FarmingUnitContainer(syncid, player.inventory, farmer));
+            FarmingUnitBlockEntity farmingUnit = (FarmingUnitBlockEntity) player.world.getBlockEntity(pos);
+            return new FarmingUnitGui(farmingUnit, new FarmingUnitContainer(syncid, player.inventory, farmingUnit));
         }));
 
     }

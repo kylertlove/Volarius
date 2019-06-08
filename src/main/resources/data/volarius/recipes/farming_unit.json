@@ -1,0 +1,23 @@
+
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "bcb",
+    "cwc",
+    "bcb"
+  ],
+  "key": {
+    "b": {
+      "item": "minecraft:stone"
+    },
+    "w": {
+      "item": "minecraft:comparator"
+    },
+    "c": {
+      "item": "minecraft:diamond_hoe"
+    }
+  },
+  "result": {
+    "item": "volarius:farming_unit"
+  }
+}
