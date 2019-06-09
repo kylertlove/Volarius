@@ -3,12 +3,8 @@ package net.nerds.volarius.machines.fishTrap;
 import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.CropBlock;
-import net.minecraft.block.FluidBlock;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.WaterFluid;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
@@ -36,7 +32,7 @@ public class FishTrapBlockEntity extends BlockEntity implements Tickable, BlockE
 
     private int tickCounter = 0; //counter to validate if waited
     private int tickValidator = 200; //how many ticks to wait
-    private int lureLevel = 3;
+    private float lureLevel = 3.0f;
     private int maxStorage = 54;
     public DefaultedList<ItemStack> inventory;
 
@@ -66,7 +62,6 @@ public class FishTrapBlockEntity extends BlockEntity implements Tickable, BlockE
             for(BlockPos blockPos : waterCheckInterator) {
                 Block block = world.getBlockState(blockPos).getBlock();
                 if(world.getBlockEntity(pos) != null && (block != Blocks.WATER && !(block instanceof FishTrapBlock))) {
-                    //cant fish
                     isSurroundedByWater = false;
                     break;
                 }
@@ -85,7 +80,7 @@ public class FishTrapBlockEntity extends BlockEntity implements Tickable, BlockE
             LootContext.Builder lootContextBuilder = (new LootContext.Builder((ServerWorld)this.world))
                     .put(LootContextParameters.POSITION, new BlockPos(pos))
                     .put(LootContextParameters.TOOL, itemStack)
-                    .setRandom(world.random).setLuck((float)this.lureLevel);
+                    .setRandom(world.random).setLuck(lureLevel);
             LootSupplier lootSupplier = this.world.getServer().getLootManager().getSupplier(LootTables.FISHING_GAMEPLAY);
             List<ItemStack> list = lootSupplier.getDrops(lootContextBuilder.build(LootContextTypes.FISHING));
             addItemsToInventory(list);
@@ -95,14 +90,13 @@ public class FishTrapBlockEntity extends BlockEntity implements Tickable, BlockE
         for(ItemStack itemStack : itemStackList) {
             //loop through inventory looking for space
             for(int i = 0; i < inventory.size(); i++) {
-                if(inventory.get(i).isEmpty() && itemStack.getAmount() > 0) {
+                if(inventory.get(i).isEmpty()) {
                     inventory.set(i, itemStack);
                     markDirty();
                     break;
                 } else if(inventory.get(i).isEqualIgnoreTags(itemStack) &&
-                        (inventory.get(i).getAmount() + itemStack.getAmount() < 64 &&
-                                itemStack.getAmount() > 0)
-                ) {
+                         (inventory.get(i).getAmount() + itemStack.getAmount() < 64) &&
+                          itemStack.canStack()) {
                     inventory.set(i, new ItemStack(itemStack.getItem(), itemStack.getAmount() + inventory.get(i).getAmount()));
                     markDirty();
                     break;
@@ -143,7 +137,6 @@ public class FishTrapBlockEntity extends BlockEntity implements Tickable, BlockE
     @Override
     public boolean isInvEmpty() {
         Iterator var1 = this.inventory.iterator();
-
         ItemStack itemStack_1;
         do {
             if (!var1.hasNext()) {
@@ -151,7 +144,6 @@ public class FishTrapBlockEntity extends BlockEntity implements Tickable, BlockE
             }
             itemStack_1 = (ItemStack)var1.next();
         } while(itemStack_1.isEmpty());
-
         return false;
     }
 

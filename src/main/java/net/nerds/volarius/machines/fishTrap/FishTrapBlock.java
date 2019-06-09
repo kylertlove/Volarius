@@ -68,4 +68,9 @@ public class FishTrapBlock extends Block implements BlockEntityProvider {
         Identifier identifier = Registry.BLOCK.getId(this);
         return new Identifier(identifier.getNamespace(), "blocks/" + identifier.getPath());
     }
+
+    @Override
+    public BlockRenderLayer getRenderLayer() {
+        return BlockRenderLayer.CUTOUT;
+    }
 }

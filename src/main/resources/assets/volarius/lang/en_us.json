@@ -14,6 +14,7 @@
     "item.volarius.ender_pearl_seed": "Ender Pearl Seed",
     "itemGroup.volarius.volarius": "Volarius",
     "block.volarius.farming_unit": "Farming Unit",
+    "block.volarius.fish_trap": "Fish Trap",
     "item.volarius.nether_star_helmet": "Nether Star Helmet",
     "item.volarius.nether_star_chest": "Nether Star Chestplate",
     "item.volarius.nether_star_leggings": "Nether Star Leggings",
@@ -22,6 +23,5 @@
     "item.volarius.nether_star_axe": "Nether Star Axe",
     "item.volarius.nether_star_pick": "Nether Star Pickaxe",
     "item.volarius.nether_star_shovel": "Nether Star Shovel",
-    "item.volarius.nether_star_hoe": "Nether Star Hoe",
-    "item.volarius.fish_trap": "Fish Trap"
+    "item.volarius.nether_star_hoe": "Nether Star Hoe"
 }
