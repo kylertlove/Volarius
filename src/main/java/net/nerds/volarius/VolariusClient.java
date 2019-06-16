@@ -7,9 +7,6 @@ import net.nerds.volarius.machines.MachineBlockEntities;
 import net.nerds.volarius.machines.farmer.FarmingUnitBlockEntity;
 import net.nerds.volarius.machines.farmer.FarmingUnitContainer;
 import net.nerds.volarius.machines.farmer.FarmingUnitGui;
-import net.nerds.volarius.machines.fishTrap.FishTrapBlockEntity;
-import net.nerds.volarius.machines.fishTrap.FishTrapContainer;
-import net.nerds.volarius.machines.fishTrap.FishTrapGui;
 
 public class VolariusClient implements ClientModInitializer {
 
@@ -23,12 +20,6 @@ public class VolariusClient implements ClientModInitializer {
             BlockPos pos = buf.readBlockPos();
             FarmingUnitBlockEntity farmingUnit = (FarmingUnitBlockEntity) player.world.getBlockEntity(pos);
             return new FarmingUnitGui(farmingUnit, new FarmingUnitContainer(syncid, player.inventory, farmingUnit));
-        }));
-
-        ScreenProviderRegistry.INSTANCE.registerFactory(MachineBlockEntities.FISH_TRAP_CONTAINER, ((syncid, identifier, player, buf) -> {
-            BlockPos pos = buf.readBlockPos();
-            FishTrapBlockEntity fishTrapBlockEntity = (FishTrapBlockEntity) player.world.getBlockEntity(pos);
-            return new FishTrapGui(fishTrapBlockEntity, new FishTrapContainer(syncid, player.inventory, fishTrapBlockEntity));
         }));
 
     }
