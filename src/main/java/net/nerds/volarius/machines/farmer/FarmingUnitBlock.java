@@ -28,6 +28,7 @@ import java.util.List;
 public class FarmingUnitBlock extends Block implements BlockEntityProvider {
 
     public static final DirectionProperty FACING = Properties.FACING;
+    //Block.Settings blockSettings = (Block.Settings.of(Material.STONE).strength(0, 3.5f));
 
     public FarmingUnitBlock() {
         super(FabricBlockSettings.of(Material.STONE).hardness(3.5f).build());
