@@ -156,19 +156,19 @@ public class FarmingUnitBlockEntity extends BlockEntity implements Tickable, Blo
             //remove a seed from stack for planting
             if((itemStack.getItem() instanceof AliasedBlockItem && ((AliasedBlockItem) itemStack.getItem()).getBlock() instanceof CropBlock)) {
                 aliasedBlockItems = (AliasedBlockItem) itemStack.getItem();
-                itemStack.subtractAmount(1);
+                itemStack.decrement(1);
             }
             //loop through inventory looking for space
             for(int i = 0; i < inventory.size(); i++) {
-                if(inventory.get(i).isEmpty() && itemStack.getAmount() > 0) {
+                if(inventory.get(i).isEmpty() && itemStack.getCount() > 0) {
                     inventory.set(i, itemStack);
                     markDirty();
                     break;
-                } else if(inventory.get(i).isEqualIgnoreTags(itemStack) &&
-                        (inventory.get(i).getAmount() + itemStack.getAmount() < 64 &&
-                                itemStack.getAmount() > 0)
+                } else if(inventory.get(i).isItemEqual(itemStack) &&
+                        (inventory.get(i).getCount() + itemStack.getCount() < 64 &&
+                                itemStack.getCount() > 0)
                 ) {
-                    inventory.set(i, new ItemStack(itemStack.getItem(), itemStack.getAmount() + inventory.get(i).getAmount()));
+                    inventory.set(i, new ItemStack(itemStack.getItem(), itemStack.getCount() + inventory.get(i).getCount()));
                     markDirty();
                     break;
                 }

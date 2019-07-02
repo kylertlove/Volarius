@@ -8,6 +8,6 @@ import net.nerds.volarius.Volarius;
 public class NetherStarSword extends SwordItem {
 
 	public NetherStarSword(ToolMaterial toolMaterial, int dmgMultiplier, float coolDown) {
-		super(toolMaterial, dmgMultiplier, coolDown, new Item.Settings().itemGroup(Volarius.resourceCropItemGroup));
+		super(toolMaterial, dmgMultiplier, coolDown, new Item.Settings().group(Volarius.resourceCropItemGroup));
 	}
 }

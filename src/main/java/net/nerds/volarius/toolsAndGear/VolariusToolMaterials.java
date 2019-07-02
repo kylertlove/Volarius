@@ -40,7 +40,7 @@ public enum  VolariusToolMaterials implements ToolMaterial {
 	}
 
 	@Override
-	public float getBlockBreakingSpeed() {
+	public float getMiningSpeed() {
 		return this.blockBreakSpeed;
 	}
 

@@ -7,6 +7,6 @@ import net.nerds.volarius.Volarius;
 
 public class NetherStarPick extends PickaxeItem {
 	public NetherStarPick(ToolMaterial toolMaterial, int dmgModifier, float attackSpeed) {
-		super(toolMaterial, dmgModifier, attackSpeed, new Item.Settings().itemGroup(Volarius.resourceCropItemGroup));
+		super(toolMaterial, dmgModifier, attackSpeed, new Item.Settings().group(Volarius.resourceCropItemGroup));
 	}
 }

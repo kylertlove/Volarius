@@ -22,7 +22,7 @@ public class MachineBlockManager {
 		Registry.register(Registry.BLOCK, new Identifier(Volarius.MODID, "farming_unit"), FARMING_UNIT);
 		Registry.register(Registry.ITEM,
 				new Identifier(Volarius.MODID, "farming_unit"),
-				new BlockItem(FARMING_UNIT, new Item.Settings().itemGroup(Volarius.resourceCropItemGroup)));
+				new BlockItem(FARMING_UNIT, new Item.Settings().group(Volarius.resourceCropItemGroup)));
 
 	}
 }

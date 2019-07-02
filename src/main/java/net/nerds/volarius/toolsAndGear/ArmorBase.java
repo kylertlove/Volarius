@@ -9,6 +9,6 @@ import net.nerds.volarius.Volarius;
 public class ArmorBase extends ArmorItem {
 
 	public ArmorBase(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot) {
-		super(armorMaterial, equipmentSlot, new Item.Settings().itemGroup(Volarius.resourceCropItemGroup));
+		super(armorMaterial, equipmentSlot, new Item.Settings().group(Volarius.resourceCropItemGroup));
 	}
 }

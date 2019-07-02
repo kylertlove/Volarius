@@ -4,7 +4,7 @@ import com.mojang.blaze3d.platform.GlStateManager;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ingame.AbstractContainerScreen;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import net.nerds.volarius.Volarius;
 
@@ -15,7 +15,7 @@ public class FarmingUnitGui extends AbstractContainerScreen {
     private final int rows;
 
     public FarmingUnitGui(FarmingUnitBlockEntity farmingUnitBlockEntity, FarmingUnitContainer farmingUnitContainer) {
-        super(farmingUnitContainer, farmingUnitContainer.playerInventory, new TextComponent("farming_unit"));
+        super(farmingUnitContainer, farmingUnitContainer.playerInventory, new TranslatableText("farming_unit"));
         this.tile = farmingUnitBlockEntity;
         this.rows = farmingUnitContainer.getRows();
         this.containerHeight = 114 + this.rows * 18;
@@ -35,8 +35,8 @@ public class FarmingUnitGui extends AbstractContainerScreen {
 
     @Override
     public void drawForeground(int int_1, int int_2) {
-        this.font.draw("Farming Unit", 8.0F, 6.0F, 4210752);
-        this.font.draw(this.playerInventory.getDisplayName().getFormattedText(), 8.0F, (float)(this.containerHeight - 96 + 2), 4210752);
+        this.font.draw(new TranslatableText("farming_unit").asString(), 8.0F, 6.0F, 4210752);
+        this.font.draw(this.playerInventory.getDisplayName().asFormattedString(), 8.0F, (float)(this.containerHeight - 96 + 2), 4210752);
     }
 
     @Override

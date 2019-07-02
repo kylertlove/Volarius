@@ -67,6 +67,6 @@ public class ResourceCropItems {
     }
 
     private static Item.Settings getItemSettings() {
-        return (new Item.Settings().itemGroup(Volarius.resourceCropItemGroup).stackSize(64).recipeRemainder(Items.WHEAT_SEEDS));
+        return (new Item.Settings().group(Volarius.resourceCropItemGroup).recipeRemainder(Items.WHEAT_SEEDS));
     }
 }
