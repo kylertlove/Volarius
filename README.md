@@ -1,5 +1,5 @@
 # Volarius
-Minecraft mod that has all of my testing and work to break out into individual mods when it makes sense
+Minecraft mod.  no real point to it.  just for testing ideas
 
 
 Install Links: 
