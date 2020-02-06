@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "bb ",
+    "bw ",
+    " w "
+  ],
+  "key": {
+    "b": {
+      "item": "minecraft:emerald"
+    },
+    "w": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "volaris:emerald_axe"
+  }
+}

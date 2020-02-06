@@ -15,10 +15,6 @@ public class Volaris {
     public static final String ID = "volaris";
 
     public Volaris() {
-
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
-
-
 }

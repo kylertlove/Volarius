@@ -2,6 +2,7 @@ package com.nerds.volaris.Food;
 
 import com.nerds.volaris.Volaris;
 import net.minecraft.item.*;
+import net.minecraft.tags.ItemTags;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,6 @@ public class FoodManager {
 
     public static List<Item> init() {
         List<Item> volarisFoods = new ArrayList<>();
-
         Item burgerItem = new Item((new Item.Properties())
                 .group(Volaris.volarisItemGroup)
                 .food((new Food.Builder()).hunger(15).saturation(1.9F).build()))

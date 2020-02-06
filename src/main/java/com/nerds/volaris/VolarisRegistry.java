@@ -1,6 +1,8 @@
 package com.nerds.volaris;
 
 import com.nerds.volaris.Food.FoodManager;
+import com.nerds.volaris.Gear.Emerald.EmeraldGear;
+import com.nerds.volaris.Gear.NetherStar.NetherStarGear;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -23,5 +25,9 @@ public class VolarisRegistry {
     public static void onItemRegistry(final RegistryEvent.Register<Item> itemRegisterEvent) {
 
         FoodManager.init().forEach(item -> itemRegisterEvent.getRegistry().register(item));
+
+        NetherStarGear.init().forEach(item -> itemRegisterEvent.getRegistry().register(item));
+
+        EmeraldGear.init().forEach(item -> itemRegisterEvent.getRegistry().register(item));
     }
 }

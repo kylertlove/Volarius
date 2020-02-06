@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "volaris:nether_star_sword",
+      "volaris:nether_star_pick",
+      "volaris:nether_star_axe",
+      "volaris:nether_star_shovel",
+      "volaris:nether_star_hoe",
+      "volaris:nether_star_helmet",
+      "volaris:nether_star_chestplate",
+      "volaris:nether_star_leggings",
+      "volaris:nether_star_boots"
+    ]
+  },
+  "criteria": {
+    "has_nether_star": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:nether_star"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_star"
+    ]
+  ]
+}

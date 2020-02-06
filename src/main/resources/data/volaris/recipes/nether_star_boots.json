@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "   ",
+    "b b",
+    "b b"
+  ],
+  "key": {
+    "b": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "volaris:nether_star_boots"
+  }
+}

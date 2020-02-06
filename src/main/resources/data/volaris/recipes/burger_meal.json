@@ -1,0 +1,12 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:cooked_beef" },
+    { "item": "minecraft:bread" },
+    { "item": "minecraft:bread" },
+    { "item": "minecraft:baked_potato" }
+  ],
+  "result": {
+    "item": "volaris:burger_meal"
+  }
+}
