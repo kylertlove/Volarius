@@ -1,6 +1,0 @@
-{
-    "parent": "block/crop",
-    "textures": {
-        "crop": "volarius:block/obsidian_plant_2"
-    }
-}

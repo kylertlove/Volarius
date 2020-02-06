@@ -1,6 +1,0 @@
-{
-    "parent": "block/crop",
-    "textures": {
-        "crop": "volarius:block/redstone_plant_1"
-    }
-}

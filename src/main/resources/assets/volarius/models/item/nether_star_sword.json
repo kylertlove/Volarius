@@ -1,6 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "volarius:item/nether_star_sword"
-    }
-}
